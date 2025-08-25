@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { db } from "../../config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { useAuth } from "../Auth/AuthProvider";
-import UserForm from "./userForm";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import UserForm from "./UserForm";
 
 export default function UserManagement() {
   const { user } = useAuth();
@@ -58,7 +58,7 @@ export default function UserManagement() {
 
       {/* User Form */}
       <div className="mb-6 p-4 rounded-lg shadow-md">
-        <UserForm onAdd={handleAdd} />
+        <UserForm onAdd={handleAdd}/>
       </div>
 
       {/* Users Grid */}
